@@ -1,19 +1,17 @@
 <template>
   <div id="app">
     <BadgeActiveSwitch />
-    <FormRadioButton :backgroundColor="'green'" />
-    <FormRadioButton :backgroundColor="'blue'" />
-    <FormRadioButton :backgroundColor="'red'" />
+    <BadgeColorSelector />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import BadgeActiveSwitch from "./components/ui/BadgeActiveSwitch.vue";
-import FormRadioButton from "./components/form/FormRadioButton.vue";
+import BadgeColorSelector from "./components/form/BadgeColorSelector.vue";
 
 export default Vue.extend({
   name: "App",
-  components: { BadgeActiveSwitch, FormRadioButton },
+  components: { BadgeActiveSwitch, BadgeColorSelector },
 });
 </script>
