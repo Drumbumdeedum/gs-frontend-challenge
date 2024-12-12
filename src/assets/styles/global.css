@@ -2,6 +2,8 @@ html,
 body {
   font-family: Cabin, sans-serif;
   background: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
