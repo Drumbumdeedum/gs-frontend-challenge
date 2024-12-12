@@ -16,8 +16,9 @@ export default Vue.extend({
 .switch {
   position: relative;
   display: inline-block;
-  width: 40.4px;
+  width: 40.11px;
   height: 20.05px;
+  left: 0.29px;
 }
 
 .switch input {
@@ -32,20 +33,23 @@ export default Vue.extend({
   right: 0;
   bottom: 0;
   background: #f9f9f9;
-  outline: 0.59px solid #afc6bd;
+  outline: 0.58978px solid #afc6bd;
+  box-shadow: inset 0px 0.884669px 5.8978px rgba(0, 0, 0, 0.15);
+  border-radius: 29.489px;
   transition: 0.3s;
-  border-radius: 29.49px;
-  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.3);
 }
 
 .slider::before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: white;
+  width: 20.05px;
+  height: 20.05px;
+  left: 0px;
+  top: 0px;
+  background: #f9f9f9;
   outline: 0.58978px solid #f2ebdb;
+  box-shadow: 0px 0px 1.17956px rgba(0, 0, 0, 0.35);
+  border-radius: 29.489px;
   transition: all 0.3s ease-in-out;
 }
 
