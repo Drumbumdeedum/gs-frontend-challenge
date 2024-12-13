@@ -6,4 +6,13 @@ export const actions = {
   ) {
     commit("updateWidgetLinkedStatus", payload);
   },
+  changeWidgetActiveStatus(
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    { commit }: { commit: Function },
+    payload: {
+      widgetId: number;
+    }
+  ) {
+    commit("updateWidgetActiveStatus", payload);
+  },
 };

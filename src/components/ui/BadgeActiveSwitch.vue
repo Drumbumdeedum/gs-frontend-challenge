@@ -1,14 +1,30 @@
 <template>
   <label class="switch">
-    <input type="checkbox" />
+    <input
+      type="checkbox"
+      @change="onChecked"
+      :value="value"
+      :checked="value"
+    />
     <span class="slider"></span>
   </label>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropType } from "vue";
+
 export default Vue.extend({
   name: "badge-active-switch",
+  props: {
+    value: {
+      type: Boolean,
+      required: true,
+    },
+    onChecked: {
+      type: Function as PropType<(payload: Event) => void>,
+      required: true,
+    },
+  },
 });
 </script>
 

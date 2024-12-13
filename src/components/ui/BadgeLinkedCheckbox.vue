@@ -29,8 +29,7 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { PropType } from "vue";
+import Vue, { PropType } from "vue";
 
 export default Vue.extend({
   name: "badge-linked-checkbox",

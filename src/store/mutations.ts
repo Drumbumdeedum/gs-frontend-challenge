@@ -14,4 +14,12 @@ export const mutations = {
       widget.linked = linkedStatus;
     }
   },
+  updateWidgetActiveStatus(
+    state: RootState,
+    { widgetId }: { widgetId: number }
+  ) {
+    state.widgets.forEach((widget) => {
+      widget.active = widget.id === widgetId;
+    });
+  },
 };

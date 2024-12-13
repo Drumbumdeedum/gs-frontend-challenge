@@ -35,7 +35,10 @@
       <div class="settings-option">
         <label class="setting-label">Activate badge</label>
         <div class="setting-control">
-          <BadgeActiveSwitch />
+          <BadgeActiveSwitch
+            :value="widget.active"
+            :onChecked="onActiveChecked"
+          />
         </div>
       </div>
     </section>
@@ -68,11 +71,16 @@ export default Vue.extend({
     },
   },
   methods: {
-    ...mapActions(["changeWidgetLinkedStatus"]),
+    ...mapActions(["changeWidgetLinkedStatus", "changeWidgetActiveStatus"]),
     onLinkChecked() {
       this.changeWidgetLinkedStatus({
         widgetId: this.widget.id,
         linkedStatus: !this.widget.linked,
+      });
+    },
+    onActiveChecked() {
+      this.changeWidgetActiveStatus({
+        widgetId: this.widget.id,
       });
     },
   },
