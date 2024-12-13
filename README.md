@@ -1,8 +1,6 @@
 # gs-frontend-challenge
 
-## Live demo hosted on Vercel
-
-[Link](https://gs-frontend-challenge.vercel.app/)
+ Live demo hosted on Vercel: [Link](https://gs-frontend-challenge.vercel.app/)
 
 ## Project setup
 
