@@ -2,6 +2,7 @@
   <label class="switch">
     <input
       id="badge-active-switch"
+      aria-label="badge active switch"
       type="checkbox"
       @change="onChecked"
       :value="value"

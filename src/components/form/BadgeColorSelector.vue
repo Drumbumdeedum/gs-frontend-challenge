@@ -3,6 +3,7 @@
     <FormRadioButton
       v-for="badgeColor in badgeColors"
       v-bind:key="badgeColor.name"
+      :id="badgeColor.name"
       :colorName="badgeColor.name"
       :backgroundColor="badgeColor.color"
       :checked="badgeColor.name === selectedColor"

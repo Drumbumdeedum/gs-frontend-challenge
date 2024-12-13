@@ -3,6 +3,7 @@
     <label class="checkbox">
       <input
         id="badge-linked-checkbox"
+        aria-label="badge linked checkbox"
         type="checkbox"
         v-bind="$attrs"
         @change="onChecked"

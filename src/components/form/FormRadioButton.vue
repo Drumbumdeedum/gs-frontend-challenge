@@ -1,6 +1,8 @@
 <template>
-  <label>
+  <label :for="id">
     <input
+      :id="id"
+      :aria-label="`${colorName} radio button`"
       type="radio"
       name="badge-theme"
       :style="{ backgroundColor }"
@@ -17,6 +19,10 @@ import Vue from "vue";
 export default Vue.extend({
   name: "form-radio-button",
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     value: {
       type: Boolean,
       required: true,
