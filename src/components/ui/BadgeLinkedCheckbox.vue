@@ -60,6 +60,7 @@ export default Vue.extend({
   }
 
   .checkbox input {
+    position: absolute;
     opacity: 0;
   }
 

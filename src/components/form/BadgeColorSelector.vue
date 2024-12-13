@@ -1,9 +1,9 @@
 <template>
   <form>
     <FormRadioButton
-      v-for="badgeColor in badgeColors"
+      v-for="(badgeColor, index) in badgeColors"
       v-bind:key="badgeColor.name"
-      :id="badgeColor.name"
+      :index="index"
       :colorName="badgeColor.name"
       :backgroundColor="badgeColor.color"
       :checked="badgeColor.name === selectedColor"
