@@ -69,8 +69,10 @@ input[type="radio"] {
   transition: border 0.3s ease-in-out;
 }
 
-input[type="radio"]:hover {
-  opacity: 0.8;
+@media (hover: hover) {
+  input[type="radio"]:hover {
+    opacity: 0.8;
+  }
 }
 
 input[type="radio"]:checked {

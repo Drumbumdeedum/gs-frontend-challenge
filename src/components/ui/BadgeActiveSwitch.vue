@@ -84,7 +84,9 @@ input:checked + .slider::before {
   transform: translateX(22px);
 }
 
-.switch:hover .slider::before {
-  box-shadow: 0 0 0 6px rgba(59, 117, 95, 0.3);
+@media (hover: hover) {
+  .switch:hover .slider::before {
+    box-shadow: 0 0 0 6px rgba(59, 117, 95, 0.3);
+  }
 }
 </style>

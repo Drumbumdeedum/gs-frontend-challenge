@@ -107,8 +107,11 @@ export default Vue.extend({
     right: 50%;
     transition: all 0.3s ease;
   }
-  .checkbox:hover::before {
-    opacity: 50%;
+
+  @media (hover: hover) {
+    .checkbox:hover::before {
+      opacity: 50%;
+    }
   }
 }
 </style>
