@@ -3,6 +3,7 @@
     <label class="checkbox">
       <input
         type="checkbox"
+        v-bind="$attrs"
         @change="onChecked"
         :value="value"
         :checked="value"
@@ -32,6 +33,7 @@
 import Vue, { PropType } from "vue";
 
 export default Vue.extend({
+  inheritAttrs: true,
   name: "badge-linked-checkbox",
   props: {
     value: {

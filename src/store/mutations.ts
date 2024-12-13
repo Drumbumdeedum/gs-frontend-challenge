@@ -22,4 +22,19 @@ export const mutations = {
       widget.active = widget.id === widgetId;
     });
   },
+  updateWidgetSelectedColor(
+    state: RootState,
+    {
+      widgetId,
+      selectedColor,
+    }: {
+      widgetId: number;
+      selectedColor: "white" | "black" | "blue" | "green" | "beige";
+    }
+  ) {
+    const widget = state.widgets.find((w) => w.id === widgetId);
+    if (widget) {
+      widget.selectedColor = selectedColor;
+    }
+  },
 };

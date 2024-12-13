@@ -1,25 +1,46 @@
 <template>
   <label>
-    <input type="radio" name="badge-theme" :style="{ backgroundColor }" />
+    <input
+      type="radio"
+      name="badge-theme"
+      :style="{ backgroundColor }"
+      :checked="checked"
+      :value="value"
+      @change="onChange"
+    />
   </label>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+
 export default Vue.extend({
   name: "form-radio-button",
   props: {
-    /* value: {
+    value: {
       type: Boolean,
       required: true,
     },
     checked: {
       type: Boolean,
       default: false,
-    }, */
+    },
+    colorName: {
+      type: String,
+      required: true,
+    },
     backgroundColor: {
       type: String,
       required: true,
+    },
+    onChecked: {
+      type: Function,
+      required: true,
+    },
+  },
+  methods: {
+    onChange() {
+      this.onChecked(this.colorName);
     },
   },
 });

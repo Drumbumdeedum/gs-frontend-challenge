@@ -16,7 +16,9 @@
         <label class="setting-label">
           Link to public profile
           <span class="info-icon">
-            <IconInfo />
+            <HoverTooltip :message="tooltipMessage">
+              <IconInfo />
+            </HoverTooltip>
           </span>
         </label>
         <div class="setting-control">
@@ -29,7 +31,10 @@
       <div class="settings-option">
         <label class="setting-label">Badge colour</label>
         <div class="setting-control">
-          <BadgeColorSelector />
+          <BadgeColorSelector
+            :selectedColor="widget.selectedColor"
+            :onColorChange="onColorChanged"
+          />
         </div>
       </div>
       <div class="settings-option">
@@ -54,6 +59,7 @@ import BadgeLinkedCheckbox from "./ui/BadgeLinkedCheckbox.vue";
 import GreenSparkLogo from "./icons/GreenSparkLogo.vue";
 import IconInfo from "./icons/IconInfo.vue";
 import { mapActions } from "vuex";
+import HoverTooltip from "./ui/HoverTooltip.vue";
 
 export default Vue.extend({
   name: "widget-item",
@@ -62,6 +68,7 @@ export default Vue.extend({
     BadgeColorSelector,
     BadgeLinkedCheckbox,
     GreenSparkLogo,
+    HoverTooltip,
     IconInfo,
   },
   props: {
@@ -71,17 +78,32 @@ export default Vue.extend({
     },
   },
   methods: {
-    ...mapActions(["changeWidgetLinkedStatus", "changeWidgetActiveStatus"]),
+    ...mapActions([
+      "changeWidgetLinkedStatus",
+      "changeWidgetActiveStatus",
+      "changeWidgetSelectedColor",
+    ]),
     onLinkChecked() {
       this.changeWidgetLinkedStatus({
         widgetId: this.widget.id,
         linkedStatus: !this.widget.linked,
       });
+      console.log(this.$store.state.widgets.map((w: Widget) => w.linked));
     },
     onActiveChecked() {
       this.changeWidgetActiveStatus({
         widgetId: this.widget.id,
       });
+      console.log(this.$store.state.widgets.map((w: Widget) => w.active));
+    },
+    onColorChanged(selectedColor: string) {
+      this.changeWidgetSelectedColor({
+        widgetId: this.widget.id,
+        selectedColor,
+      });
+      console.log(
+        this.$store.state.widgets.map((w: Widget) => w.selectedColor)
+      );
     },
   },
   computed: {
