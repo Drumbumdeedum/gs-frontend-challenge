@@ -60,12 +60,16 @@ export default Vue.extend({
 
   .checkbox input {
     opacity: 0;
-    height: 16px;
-    width: 16px;
-    position: absolute;
-    transform: translateX(50%) translateY(-50%);
-    top: 31%;
-    right: 33%;
+  }
+
+  .checkbox input:checked + .checkbox-box {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+  }
+
+  .checkbox input:focus-visible + .checkbox-box {
+    box-shadow: 0px 0px 0px 2px rgba(76, 175, 80, 0.8);
   }
 
   .checkbox .checkbox-box {
@@ -85,16 +89,6 @@ export default Vue.extend({
     width: 14px;
     height: 14px;
     z-index: 3;
-  }
-
-  .checkbox input:checked + .checkbox-box {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: #ffffff;
-  }
-
-  .checkbox input:focus-visible {
-    opacity: 100;
   }
 
   .checkbox::before {

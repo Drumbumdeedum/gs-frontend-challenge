@@ -41,6 +41,10 @@ export default Vue.extend({
   opacity: 0;
 }
 
+.switch input:focus-visible + .slider {
+  box-shadow: 0px 0px 0px 2px rgba(76, 175, 80, 0.8);
+}
+
 .slider {
   position: absolute;
   cursor: pointer;
