@@ -48,7 +48,7 @@ export default Vue.extend({
   left: 0;
   right: 0;
   bottom: 0;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   outline: 0.59px solid #afc6bd;
   transition: 0.3s;
   border-radius: 29.49px;
