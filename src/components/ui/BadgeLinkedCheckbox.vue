@@ -59,8 +59,8 @@ export default Vue.extend({
   }
 
   .checkbox .checkbox-box .checkmark {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     z-index: 3;
   }
 
@@ -75,11 +75,10 @@ export default Vue.extend({
     z-index: 2;
     content: "";
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-color: #afc6bd;
     border-radius: 50%;
-    top: 0%;
     transform: translateX(50%) translateY(-50%);
     top: 50%;
     right: 50%;
