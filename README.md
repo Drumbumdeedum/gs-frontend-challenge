@@ -1,6 +1,9 @@
 # gs-frontend-challenge
 
- Live demo hosted on Vercel: [Link](https://gs-frontend-challenge.vercel.app/)
+I’ve chosen Vue.js 2 for the frontend framework, combined with TypeScript for type safety and Vuex for efficient state management. For unit testing I’ve integrated Jest.
+You can explore a live demo of the solution, hosted on Vercel, by following this link: [Link](https://gs-frontend-challenge.vercel.app/)
+
+To run the solution locally, simply clone or download this repository, then execute the following commands:
 
 ## Project setup
 
