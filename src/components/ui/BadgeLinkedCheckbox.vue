@@ -67,7 +67,7 @@ export default Vue.extend({
   .checkbox .checkbox-box {
     width: 14px;
     height: 14px;
-    border: 2px solid #212121;
+    border: 2px solid #323232;
     color: transparent;
     border-radius: 4px;
     display: flex;
