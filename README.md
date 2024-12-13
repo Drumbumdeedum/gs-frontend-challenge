@@ -2,9 +2,7 @@
 
 ## Live demo hosted on Vercel
 
-```
-https://gs-frontend-challenge.vercel.app/
-```
+[Link](https://gs-frontend-challenge.vercel.app/)
 
 ## Project setup
 
