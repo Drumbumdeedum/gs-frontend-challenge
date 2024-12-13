@@ -61,6 +61,8 @@ export default Vue.extend({
 @media (max-width: 768px) {
   .widget-list {
     flex-direction: column;
+    align-items: center;
+    gap: 42px;
   }
 }
 

@@ -164,5 +164,9 @@ export default Vue.extend({
       }
     }
   }
+
+  @media (max-width: 768px) {
+    max-width: 221.32px;
+  }
 }
 </style>

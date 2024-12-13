@@ -20,5 +20,10 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 </style>
