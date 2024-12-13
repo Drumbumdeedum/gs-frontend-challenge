@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <IconInfo />
-    <GreenSparkLogo />
+    <MainLayout />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import IconInfo from "./components/icons/IconInfo.vue";
-import GreenSparkLogo from "./components/icons/GreenSparkLogo.vue";
+import MainLayout from "./layouts/MainLayout.vue";
 
 export default Vue.extend({
   name: "App",
-  components: { GreenSparkLogo, IconInfo },
+  components: { MainLayout },
 });
 </script>
 
