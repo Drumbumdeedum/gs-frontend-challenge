@@ -28,6 +28,7 @@ export default Vue.extend({
     0px 0.777778px 2.99074px rgba(0, 0, 0, 0.012037);
   border-radius: 8px;
   background: #f9f9f9;
+  min-height: 419px;
 
   header {
     border-bottom: 2px solid #b0b0b0;
