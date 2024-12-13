@@ -23,9 +23,6 @@
           <path d="M6 12l4 4L18 6" />
         </svg>
       </span>
-      <span class="label-text">
-        <slot></slot>
-      </span>
     </label>
   </div>
 </template>
@@ -62,9 +59,9 @@ export default Vue.extend({
   }
 
   .checkbox input {
-    height: 15px;
-    width: 15px;
-    border: transparent;
+    opacity: 0;
+    height: 16px;
+    width: 16px;
     position: absolute;
     transform: translateX(50%) translateY(-50%);
     top: 31%;
@@ -76,7 +73,7 @@ export default Vue.extend({
     height: 14px;
     border: 2px solid #323232;
     color: transparent;
-    border-radius: 4px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,6 +91,10 @@ export default Vue.extend({
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     color: #ffffff;
+  }
+
+  .checkbox input:focus-visible {
+    opacity: 100;
   }
 
   .checkbox::before {
