@@ -1,6 +1,7 @@
 <template>
   <label class="switch">
     <input
+      id="badge-active-switch"
       type="checkbox"
       @change="onChecked"
       :value="value"
