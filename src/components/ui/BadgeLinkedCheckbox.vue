@@ -30,6 +30,8 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { PropType } from "vue";
+
 export default Vue.extend({
   name: "badge-linked-checkbox",
   props: {
@@ -39,7 +41,7 @@ export default Vue.extend({
       default: false,
     },
     onChecked: {
-      type: Function,
+      type: Function as PropType<(payload: Event) => void>,
       required: true,
     },
   },
