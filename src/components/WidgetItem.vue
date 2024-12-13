@@ -74,7 +74,6 @@ export default Vue.extend({
   props: {
     widget: {
       type: Object as () => Widget,
-      required: true,
     },
   },
   methods: {
