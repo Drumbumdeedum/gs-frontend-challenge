@@ -62,7 +62,13 @@ export default Vue.extend({
   }
 
   .checkbox input {
-    display: none;
+    height: 15px;
+    width: 15px;
+    border: transparent;
+    position: absolute;
+    transform: translateX(50%) translateY(-50%);
+    top: 31%;
+    right: 33%;
   }
 
   .checkbox .checkbox-box {
