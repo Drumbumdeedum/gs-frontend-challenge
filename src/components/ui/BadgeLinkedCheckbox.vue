@@ -80,7 +80,7 @@ export default Vue.extend({
     background-color: #afc6bd;
     border-radius: 50%;
     transform: translateX(50%) translateY(-50%);
-    top: 50%;
+    top: 46%;
     right: 50%;
     transition: all 0.3s ease;
   }

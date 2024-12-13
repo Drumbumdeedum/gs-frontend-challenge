@@ -63,6 +63,6 @@ input:checked + .slider::before {
 }
 
 .switch:hover .slider::before {
-  box-shadow: 0 0 0 5px rgba(59, 117, 95, 0.3);
+  box-shadow: 0 0 0 6px rgba(59, 117, 95, 0.3);
 }
 </style>

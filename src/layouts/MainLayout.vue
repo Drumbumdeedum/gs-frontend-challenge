@@ -1,13 +1,20 @@
 <template>
   <div class="main-container">
-    <div class="widget-container">Main</div>
+    <div class="widget-container">
+      <header>
+        <h1>Per product widgets</h1>
+      </header>
+      <main><WidgetItemList /></main>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
+import WidgetItemList from "@/components/WidgetItemList.vue";
 import Vue from "vue";
 export default Vue.extend({
   name: "main-layout",
+  components: { WidgetItemList },
 });
 </script>
 
@@ -21,6 +28,12 @@ export default Vue.extend({
     0px 0.777778px 2.99074px rgba(0, 0, 0, 0.012037);
   border-radius: 8px;
   background: #f9f9f9;
+
+  header {
+    border-bottom: 2px solid #b0b0b0;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
 
   .widget-container {
     padding: 36px;
