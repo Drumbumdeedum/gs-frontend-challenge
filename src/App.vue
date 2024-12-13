@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    <BadgeActiveSwitch />
-    <BadgeColorSelector />
-    <BadgeLinkedCheckbox />
+    <IconInfo />
+    <GreenSparkLogo />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import BadgeActiveSwitch from "./components/ui/BadgeActiveSwitch.vue";
-import BadgeColorSelector from "./components/form/BadgeColorSelector.vue";
-import BadgeLinkedCheckbox from "./components/ui/BadgeLinkedCheckbox.vue";
+import IconInfo from "./components/icons/IconInfo.vue";
+import GreenSparkLogo from "./components/icons/GreenSparkLogo.vue";
 
 export default Vue.extend({
   name: "App",
-  components: { BadgeActiveSwitch, BadgeColorSelector, BadgeLinkedCheckbox },
+  components: { GreenSparkLogo, IconInfo },
 });
 </script>
 
