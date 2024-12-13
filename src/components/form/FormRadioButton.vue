@@ -2,7 +2,7 @@
   <label :for="colorName">
     <input
       :id="colorName"
-      :tabindex="index"
+      tabindex="0"
       :aria-label="`${colorName} radio button`"
       type="radio"
       name="badge-theme"
