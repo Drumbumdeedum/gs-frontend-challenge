@@ -20,7 +20,10 @@
           </span>
         </label>
         <div class="setting-control">
-          <BadgeLinkedCheckbox />
+          <BadgeLinkedCheckbox
+            :value="widget.linked"
+            :onChecked="onLinkChecked"
+          />
         </div>
       </div>
       <div class="settings-option">
@@ -47,6 +50,7 @@ import BadgeColorSelector from "./form/BadgeColorSelector.vue";
 import BadgeLinkedCheckbox from "./ui/BadgeLinkedCheckbox.vue";
 import GreenSparkLogo from "./icons/GreenSparkLogo.vue";
 import IconInfo from "./icons/IconInfo.vue";
+import { mapActions } from "vuex";
 
 export default Vue.extend({
   name: "widget-item",
@@ -61,6 +65,15 @@ export default Vue.extend({
     widget: {
       type: Object as () => Widget,
       required: true,
+    },
+  },
+  methods: {
+    ...mapActions(["changeWidgetLinkedStatus"]),
+    onLinkChecked() {
+      this.changeWidgetLinkedStatus({
+        widgetId: this.widget.id,
+        linkedStatus: !this.widget.linked,
+      });
     },
   },
   computed: {

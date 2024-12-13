@@ -1,7 +1,12 @@
 <template>
   <div class="checkbox-wrapper">
     <label class="checkbox">
-      <input type="checkbox" />
+      <input
+        type="checkbox"
+        @change="onChecked"
+        :value="value"
+        :checked="value"
+      />
       <span class="checkbox-box">
         <svg
           class="checkmark"
@@ -27,6 +32,17 @@
 import Vue from "vue";
 export default Vue.extend({
   name: "badge-linked-checkbox",
+  props: {
+    value: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    onChecked: {
+      type: Function,
+      required: true,
+    },
+  },
 });
 </script>
 
@@ -80,7 +96,7 @@ export default Vue.extend({
     background-color: #afc6bd;
     border-radius: 50%;
     transform: translateX(50%) translateY(-50%);
-    top: 46%;
+    top: 44%;
     right: 50%;
     transition: all 0.3s ease;
   }

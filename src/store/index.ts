@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex, { StoreOptions } from "vuex";
 import { RootState } from "./types";
 import { mutations } from "./mutations";
+import { actions } from "./actions";
 
 Vue.use(Vuex);
 
@@ -10,7 +11,7 @@ const store: StoreOptions<RootState> = {
     widgets: [],
   },
   mutations,
-  actions: {},
+  actions,
   getters: {},
   modules: {},
 };
