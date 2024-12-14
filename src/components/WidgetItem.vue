@@ -23,6 +23,7 @@
         </label>
         <div class="setting-control">
           <BadgeLinkedCheckbox
+            :id="widget.id"
             :value="widget.linked"
             :onChecked="onLinkChecked"
           />
