@@ -33,6 +33,7 @@
         <label class="setting-label">Badge colour</label>
         <div class="setting-control">
           <BadgeColorSelector
+            :id="widget.id"
             :selectedColor="widget.selectedColor"
             :onColorChange="onColorChanged"
           />

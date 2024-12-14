@@ -3,6 +3,7 @@
     <FormRadioButton
       v-for="(badgeColor, index) in badgeColors"
       v-bind:key="badgeColor.name"
+      :id="id"
       :index="index"
       :colorName="badgeColor.name"
       :backgroundColor="badgeColor.color"
@@ -21,6 +22,10 @@ export default Vue.extend({
   name: "badge-color-selector",
   components: { FormRadioButton },
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     selectedColor: {
       type: String,
       required: true,
