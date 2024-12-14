@@ -157,6 +157,7 @@ export default Vue.extend({
     height: 66px;
     align-items: center;
     gap: 16px;
+    transition: background-color, color 0.2s ease-in-out;
 
     .header-content {
       display: flex;
