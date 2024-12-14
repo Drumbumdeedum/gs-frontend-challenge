@@ -10,7 +10,7 @@ describe("BadgeLinkedCheckbox.vue", () => {
       },
     });
 
-    expect(wrapper.find(".checkbox").exists()).toBe(true);
+    expect(wrapper.find("input[type='checkbox']").exists()).toBe(true);
   });
 
   it("renders with the correct default checked state based on the value prop", async () => {
@@ -21,7 +21,7 @@ describe("BadgeLinkedCheckbox.vue", () => {
       },
     });
 
-    const checkbox = wrapper.find("#badge-linked-checkbox");
+    const checkbox = wrapper.find("input[type='checkbox']");
     const checkboxElement = checkbox.element as HTMLInputElement;
     expect(checkboxElement.checked).toBe(true);
     await wrapper.setProps({ value: false });
@@ -37,7 +37,7 @@ describe("BadgeLinkedCheckbox.vue", () => {
       },
     });
 
-    const checkbox = wrapper.find("#badge-linked-checkbox");
+    const checkbox = wrapper.find("input[type='checkbox']");
     await checkbox.setChecked(true);
     expect(onCheckedMock).toHaveBeenCalled();
   });
@@ -51,7 +51,7 @@ describe("BadgeLinkedCheckbox.vue", () => {
       },
     });
 
-    const checkbox = wrapper.find("#badge-linked-checkbox");
+    const checkbox = wrapper.find("input[type='checkbox']");
     await checkbox.setChecked(true);
     expect(onCheckedMock).not.toHaveBeenCalled();
   });
@@ -64,7 +64,7 @@ describe("BadgeLinkedCheckbox.vue", () => {
       },
     });
 
-    const checkbox = wrapper.find("#badge-linked-checkbox");
+    const checkbox = wrapper.find("input[type='checkbox']");
     const label = wrapper.find("label");
     expect(checkbox.attributes("aria-labelledby")).toBe(label.attributes("id"));
   });
