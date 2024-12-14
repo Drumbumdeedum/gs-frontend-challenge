@@ -73,6 +73,7 @@ export default Vue.extend({
     box-shadow: 0px 4px 4px 0px #00000003;
     border: 1.5px solid transparent;
     transition: border 0.3s ease-in-out;
+    border-radius: 0px;
   }
 
   @media (hover: hover) {
